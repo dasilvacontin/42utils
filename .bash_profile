@@ -1,0 +1,6 @@
+alias gmou='gcc -Wall -Wextra -Werror'
+alias nor='norminette --CheckForbiddenSourceHeader'
+alias goes='clear && echo "GOES" && echo "(have you hugged a unikitty today?)\n" && cd $HOME/Documents/repos/ && ls'
+alias gutils='gmou $HOME/Documents/repos/42utils/utils.o'
+alias bupdate='cp $HOME/Documents/repos/42utils/.bash_profile ~/.bash_profile && source ~/.bash_profile && echo "bash_profile file reloaded!"'
+alias bedit='echo "editing bash_profile, bupdate afterwards!" && vi $HOME/Documents/repos/42utils/.bash_profile'
