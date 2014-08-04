@@ -1,8 +1,8 @@
 setopt prompt_subst
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-export PS1="%n@%T %w {\e[36m}{$git_branch}{\e[0m}\[{$txtred}\]{$git_dirty}\[{$txtrst}\]\$ "
-export PS1=$'%{\e[0;36m%}%n@%m%{\e[0m%} ~ %15<..<%~%<< %{\e[0;36m%}( ͡° ͜ʖ ͡°)%{\e[0m%}%{\e[0;33m%}$(find_git_branch && echo $git_branch)%{\e[0m%} '
+#export PS1="%n@%T %w {\e[36m}{$git_branch}{\e[0m}\[{$txtred}\]{$git_dirty}\[{$txtrst}\]\$ "
+export PS1=$'%{\e[0;36m%}%n@%m%{\e[0m%} ~ %15<..<%~%<<%{\e[36m%} ( ͡° ͜ʖ ͡°)%{\e[0m%} $(find_git_branch && find_git_dirty && if [ $git_branch ] ; then if [ $git_dirty ] ; then echo "\e[0;33m$git_branch* " ; else echo "\e[0;32m$git_branch " ; fi ; fi)%{\e[0m%}'
 
 alias gmou='gcc -Wall -Wextra -Werror'
 alias nor='norminette --CheckForbiddenSourceHeader'
